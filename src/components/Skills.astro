@@ -1,0 +1,73 @@
+---
+import type { SkillsTranslations } from '../i18n/types';
+
+interface Props {
+  skills: SkillsTranslations;
+}
+
+const { skills } = Astro.props;
+---
+
+<section id="skills" class="section">
+  <div class="container">
+    <h2 class="section-title">{skills.title}</h2>
+    <div class="skills-grid">
+      {skills.categories.map((category) => (
+        <div class="skills-category">
+          <h3 class="skills-category-name">{category.name}</h3>
+          <div class="skills-tags">
+            {category.items.map((item) => (
+              <span class="skills-tag">{item}</span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .skills-grid {
+    max-width: 750px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  .skills-category {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: box-shadow 0.2s;
+  }
+
+  .skills-category:hover {
+    box-shadow: 0 4px 12px var(--color-shadow);
+  }
+
+  .skills-category-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 0.85rem;
+  }
+
+  .skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skills-tag {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background: var(--color-tag-bg);
+    color: var(--color-tag-text);
+    border: 1px solid var(--color-border);
+  }
+</style>
