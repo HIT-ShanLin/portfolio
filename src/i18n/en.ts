@@ -3,15 +3,15 @@ import type { Translations } from './types';
 export const en: Translations = {
   site: {
     title: 'Shan Lin - Portfolio',
-    description: 'Personal portfolio of Shan Lin - work experience, skills, and projects',
+    description: 'Personal portfolio of Shan Lin - Edge Inference & Edge AI at Tencent Cloud',
   },
   hero: {
     name: 'Shan Lin',
-    role: 'Software Engineer',
-    tagline: 'Passionate about technology, focused on building great software products',
+    role: 'Software Engineer @ Tencent',
+    tagline: 'Focused on Tencent Cloud edge inference and edge AI technologies',
   },
   sidebar: {
-    bio: 'Software engineer focused on [your field]. Graduated from [your school], currently at [your organization].',
+    bio: 'Software Engineer at Tencent, focused on edge inference and edge AI for Tencent Cloud. M.S. in Computer Science from Harbin Institute of Technology.',
     navAbout: 'About',
     navTimeline: 'Experience',
     navSkills: 'Skills',
@@ -20,8 +20,8 @@ export const en: Translations = {
   about: {
     title: 'About Me',
     paragraphs: [
-      'I am a passionate software engineer. I focus on solving real-world problems with technology and building high-quality software products.',
-      'In my spare time, I enjoy contributing to open-source projects, exploring new technologies, and continuously improving my engineering skills.',
+      'I am a Software Engineer at Tencent, focusing on edge inference and edge AI for Tencent Cloud. I am dedicated to bringing AI capabilities to the edge — enabling computation closer to data sources for lower latency and higher efficiency.',
+      'I hold a Master\'s degree in Computer Science from Harbin Institute of Technology (HIT). In my spare time, I enjoy contributing to open-source projects, exploring cutting-edge technologies, and continuously improving my engineering skills.',
     ],
   },
   timeline: {
@@ -30,29 +30,21 @@ export const en: Translations = {
     internshipLabel: 'Internship',
     items: [
       {
-        company: '[Company]',
-        role: '[Role]',
+        company: 'Tencent',
+        role: 'Software Engineer',
         period: '2024 - Present',
-        description: '[Fill in your job description here]',
+        description: 'Responsible for R&D of Tencent Cloud edge inference and edge AI products, covering edge inference framework optimization, model deployment acceleration, and edge intelligent scheduling.',
         type: 'work' as const,
-      },
-      {
-        company: '[Internship Company]',
-        role: '[Intern Role]',
-        period: '2023 - 2024',
-        description: '[Fill in your internship description here]',
-        type: 'internship' as const,
       },
     ],
   },
   skills: {
     title: 'Technical Skills',
     categories: [
-      { name: 'Languages', items: ['TypeScript', 'Python', 'Java', 'Go'] },
-      { name: 'Frontend', items: ['React', 'Vue', 'Astro', 'Next.js', 'Tailwind CSS'] },
-      { name: 'Backend', items: ['Node.js', 'Express', 'FastAPI'] },
-      { name: 'Databases', items: ['PostgreSQL', 'MongoDB', 'Redis'] },
-      { name: 'Tools & Platforms', items: ['Git', 'Docker', 'Linux', 'GitHub Actions'] },
+      { name: 'Languages', items: ['TypeScript', 'Python', 'C++', 'Go'] },
+      { name: 'AI / Inference', items: ['ONNX Runtime', 'TensorRT', 'OpenVINO', 'Model Quantization', 'Edge Inference'] },
+      { name: 'Cloud & Infra', items: ['Docker', 'Kubernetes', 'Linux', 'Tencent Cloud'] },
+      { name: 'Frontend & Tools', items: ['React', 'Next.js', 'Node.js', 'Git', 'GitHub Actions'] },
     ],
   },
   projects: {
@@ -65,7 +57,7 @@ export const en: Translations = {
     language: 'Language',
   },
   footer: {
-    copyright: '© 2026 Shan Lin. All rights reserved.',
+    copyright: '© 2026 Shan Lin',
     builtWith: 'Built with Astro, hosted on GitHub Pages',
   },
 };

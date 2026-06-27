@@ -3,15 +3,15 @@ import type { Translations } from './types';
 export const zh: Translations = {
   site: {
     title: 'Shan Lin - 个人简介',
-    description: 'Shan Lin 的个人主页 - 工作经历、技术能力与项目展示',
+    description: 'Shan Lin 的个人主页 - 腾讯云边缘推理与边缘AI',
   },
   hero: {
     name: 'Shan Lin',
-    role: '软件工程师',
-    tagline: '热爱技术，专注于构建优秀的软件产品',
+    role: '软件工程师 @ 腾讯',
+    tagline: '专注于腾讯云边缘推理与边缘AI技术',
   },
   sidebar: {
-    bio: '软件工程师，专注于[你的技术领域]。毕业于[你的学校]，目前工作/学习于[你的单位]。',
+    bio: '腾讯软件工程师，专注于腾讯云边缘推理与边缘AI。毕业于哈尔滨工业大学计算机专业（硕士）。',
     navAbout: '关于',
     navTimeline: '经历',
     navSkills: '技能',
@@ -20,8 +20,8 @@ export const zh: Translations = {
   about: {
     title: '关于我',
     paragraphs: [
-      '我是一名充满热情的软件工程师。我专注于用技术解决实际问题，致力于构建高质量的软件产品。',
-      '在业余时间，我喜欢参与开源项目，探索新技术，并持续提升自己的工程能力。',
+      '我是腾讯的一名软件工程师，专注于腾讯云的边缘推理与边缘AI领域。我致力于将AI能力推向边缘，让计算更靠近数据源，提供更低延迟、更高效率的智能服务。',
+      '我毕业于哈尔滨工业大学计算机科学与技术专业，获硕士学位。在业余时间，我喜欢参与开源项目，探索前沿技术，并持续提升自己的工程能力。',
     ],
   },
   timeline: {
@@ -30,29 +30,21 @@ export const zh: Translations = {
     internshipLabel: '实习',
     items: [
       {
-        company: '[公司名称]',
-        role: '[职位]',
+        company: '腾讯',
+        role: '软件工程师',
         period: '2024 - 至今',
-        description: '[在此填写你的工作内容描述]',
+        description: '负责腾讯云边缘推理与边缘AI相关产品的研发，涵盖边缘推理框架优化、模型部署加速、边缘智能调度等方向。',
         type: 'work',
-      },
-      {
-        company: '[实习公司]',
-        role: '[实习职位]',
-        period: '2023 - 2024',
-        description: '[在此填写你的实习内容描述]',
-        type: 'internship',
       },
     ],
   },
   skills: {
     title: '技术能力',
     categories: [
-      { name: '编程语言', items: ['TypeScript', 'Python', 'Java', 'Go'] },
-      { name: '前端', items: ['React', 'Vue', 'Astro', 'Next.js', 'Tailwind CSS'] },
-      { name: '后端', items: ['Node.js', 'Express', 'FastAPI'] },
-      { name: '数据库', items: ['PostgreSQL', 'MongoDB', 'Redis'] },
-      { name: '工具 & 平台', items: ['Git', 'Docker', 'Linux', 'GitHub Actions'] },
+      { name: '编程语言', items: ['TypeScript', 'Python', 'C++', 'Go'] },
+      { name: 'AI / 推理', items: ['ONNX Runtime', 'TensorRT', 'OpenVINO', '模型量化', '边缘推理'] },
+      { name: '云 & 基础设施', items: ['Docker', 'Kubernetes', 'Linux', '腾讯云'] },
+      { name: '前端 & 工具', items: ['React', 'Next.js', 'Node.js', 'Git', 'GitHub Actions'] },
     ],
   },
   projects: {
@@ -65,7 +57,7 @@ export const zh: Translations = {
     language: '语言',
   },
   footer: {
-    copyright: '© 2026 Shan Lin. All rights reserved.',
+    copyright: '© 2026 Shan Lin',
     builtWith: '由 Astro 构建，托管于 GitHub Pages',
   },
 };
