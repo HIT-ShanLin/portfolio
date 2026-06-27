@@ -9,7 +9,6 @@ interface Props {
 const { projects: t } = Astro.props;
 
 let repos: RepoInfo[] = [];
-let error = false;
 
 try {
   const response = await fetch(
@@ -22,11 +21,9 @@ try {
       .slice(0, 6);
   } else {
     repos = fallbackRepos;
-    error = true;
   }
 } catch {
   repos = fallbackRepos;
-  error = true;
 }
 ---
 

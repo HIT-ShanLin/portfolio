@@ -2,10 +2,11 @@
 import type { NavTranslations } from '../i18n/types';
 
 interface Props {
-  nav: NavTranslations;
+  zh: NavTranslations;
+  en: NavTranslations;
 }
 
-const { nav } = Astro.props;
+const { zh: zhNav, en: enNav } = Astro.props;
 ---
 
 <header class="navbar">
@@ -13,10 +14,22 @@ const { nav } = Astro.props;
     <a href="#" class="navbar-logo" aria-label="Home">SL</a>
 
     <ul class="navbar-links">
-      <li><a href="#about">{nav.about}</a></li>
-      <li><a href="#skills">{nav.skills}</a></li>
-      <li><a href="#timeline">{nav.timeline}</a></li>
-      <li><a href="#projects">{nav.projects}</a></li>
+      <li><a href="#about">
+        <span lang="zh">{zhNav.about}</span>
+        <span lang="en">{enNav.about}</span>
+      </a></li>
+      <li><a href="#timeline">
+        <span lang="zh">{zhNav.timeline}</span>
+        <span lang="en">{enNav.timeline}</span>
+      </a></li>
+      <li><a href="#skills">
+        <span lang="zh">{zhNav.skills}</span>
+        <span lang="en">{enNav.skills}</span>
+      </a></li>
+      <li><a href="#projects">
+        <span lang="zh">{zhNav.projects}</span>
+        <span lang="en">{enNav.projects}</span>
+      </a></li>
     </ul>
 
     <div class="navbar-actions">
@@ -126,6 +139,7 @@ const { nav } = Astro.props;
     const current = document.documentElement.getAttribute('data-lang') || 'zh';
     const next = current === 'zh' ? 'en' : 'zh';
     document.documentElement.setAttribute('data-lang', next);
+    document.documentElement.lang = next;
     localStorage.setItem('lang', next);
   });
 
@@ -134,5 +148,19 @@ const { nav } = Astro.props;
     const next = current === 'light' ? 'dark' : 'light';
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
+  });
+
+  // Intercept nav clicks to scroll to the visible language section
+  document.querySelectorAll('.navbar-links a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const id = link.getAttribute('href').substring(1);
+      const lang = document.documentElement.getAttribute('data-lang') || 'zh';
+      const activeDiv = document.querySelector(`[lang="${lang}"]`);
+      const target = activeDiv?.querySelector('#' + id);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
   });
 </script>
