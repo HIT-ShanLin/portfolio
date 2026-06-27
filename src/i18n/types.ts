@@ -1,0 +1,68 @@
+export interface NavTranslations {
+  about: string;
+  skills: string;
+  timeline: string;
+  projects: string;
+}
+
+export interface HeroTranslations {
+  name: string;
+  role: string;
+  tagline: string;
+}
+
+export interface AboutTranslations {
+  title: string;
+  paragraphs: string[];
+}
+
+export interface TimelineItem {
+  company: string;
+  role: string;
+  period: string;
+  description: string;
+  type: 'work' | 'internship';
+}
+
+export interface TimelineTranslations {
+  title: string;
+  workLabel: string;
+  internshipLabel: string;
+  items: TimelineItem[];
+}
+
+export interface SkillCategory {
+  name: string;
+  items: string[];
+}
+
+export interface SkillsTranslations {
+  title: string;
+  categories: SkillCategory[];
+}
+
+export interface ProjectsTranslations {
+  title: string;
+  loading: string;
+  error: string;
+  noProjects: string;
+  stars: string;
+  viewOnGithub: string;
+  language: string;
+}
+
+export interface FooterTranslations {
+  copyright: string;
+  builtWith: string;
+}
+
+export interface Translations {
+  site: { title: string; description: string };
+  nav: NavTranslations;
+  hero: HeroTranslations;
+  about: AboutTranslations;
+  timeline: TimelineTranslations;
+  skills: SkillsTranslations;
+  projects: ProjectsTranslations;
+  footer: FooterTranslations;
+}
