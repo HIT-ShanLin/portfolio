@@ -1,0 +1,138 @@
+---
+import type { NavTranslations } from '../i18n/types';
+
+interface Props {
+  nav: NavTranslations;
+}
+
+const { nav } = Astro.props;
+---
+
+<header class="navbar">
+  <nav class="navbar-inner container">
+    <a href="#" class="navbar-logo" aria-label="Home">SL</a>
+
+    <ul class="navbar-links">
+      <li><a href="#about">{nav.about}</a></li>
+      <li><a href="#skills">{nav.skills}</a></li>
+      <li><a href="#timeline">{nav.timeline}</a></li>
+      <li><a href="#projects">{nav.projects}</a></li>
+    </ul>
+
+    <div class="navbar-actions">
+      <button class="btn-icon" id="lang-toggle" aria-label="Toggle language">
+        <span lang="zh">EN</span>
+        <span lang="en">中</span>
+      </button>
+
+      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme">
+        <span class="icon-sun">☀</span>
+        <span class="icon-moon">🌙</span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    backdrop-filter: blur(12px);
+  }
+
+  .navbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3.5rem;
+  }
+
+  .navbar-logo {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    letter-spacing: -0.5px;
+  }
+
+  .navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 0.25rem;
+  }
+
+  .navbar-links a {
+    padding: 0.4rem 0.9rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    transition: color 0.2s, background-color 0.2s;
+  }
+
+  .navbar-links a:hover {
+    color: var(--color-text);
+    background-color: var(--color-bg-secondary);
+  }
+
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: transparent;
+    color: var(--color-text-secondary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s;
+  }
+
+  .btn-icon:hover {
+    color: var(--color-text);
+    background-color: var(--color-bg-secondary);
+  }
+
+  [data-theme='light'] .icon-moon { display: inline; }
+  [data-theme='light'] .icon-sun { display: none; }
+  [data-theme='dark'] .icon-moon { display: none; }
+  [data-theme='dark'] .icon-sun { display: inline; }
+
+  @media (max-width: 640px) {
+    .navbar-links {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const langBtn = document.getElementById('lang-toggle');
+  const themeBtn = document.getElementById('theme-toggle');
+
+  langBtn?.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-lang') || 'zh';
+    const next = current === 'zh' ? 'en' : 'zh';
+    document.documentElement.setAttribute('data-lang', next);
+    localStorage.setItem('lang', next);
+  });
+
+  themeBtn?.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme') || 'light';
+    const next = current === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  });
+</script>
