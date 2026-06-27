@@ -14,11 +14,14 @@ const { skills } = Astro.props;
     {skills.categories.map((category) => (
       <div class="skills-category">
         <h3 class="skills-category-name">{category.name}</h3>
-        <div class="skills-tags">
+        <dl class="skills-items">
           {category.items.map((item) => (
-            <span class="skills-tag">{item}</span>
+            <div class="skills-item">
+              <dt class="skills-item-name">{item.name}</dt>
+              <dd class="skills-item-desc">{item.desc}</dd>
+            </div>
           ))}
-        </div>
+        </dl>
       </div>
     ))}
   </div>
@@ -28,39 +31,63 @@ const { skills } = Astro.props;
   .skills-list {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1.25rem;
   }
 
   .skills-category {
-    padding: 0.6rem 0;
-    border-bottom: 1px solid var(--color-border-light);
-  }
-
-  .skills-category:last-child {
-    border-bottom: none;
+    padding: 0;
   }
 
   .skills-category-name {
-    font-size: 0.88rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--color-text-heading);
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid var(--color-accent);
+    font-family: Georgia, 'Times New Roman', serif;
   }
 
-  .skills-tags {
+  .skills-items {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.35rem;
+    flex-direction: column;
+    gap: 0.6rem;
   }
 
-  .skills-tag {
-    display: inline-block;
-    padding: 0.18rem 0.5rem;
-    border-radius: 0.2rem;
-    font-size: 0.78rem;
-    font-weight: 500;
+  .skills-item {
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+  }
+
+  .skills-item-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text);
+    white-space: nowrap;
+    min-width: 0;
+    flex-shrink: 0;
+    padding: 0.1rem 0.4rem;
     background: var(--color-tag-bg);
-    color: var(--color-tag-text);
+    border-radius: 0.2rem;
     border: 1px solid var(--color-border-light);
+  }
+
+  .skills-item-desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .skills-item {
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .skills-item-name {
+      white-space: normal;
+    }
   }
 </style>

@@ -34,9 +34,14 @@ export interface TimelineTranslations {
   items: TimelineItem[];
 }
 
+export interface SkillItem {
+  name: string;
+  desc: string;
+}
+
 export interface SkillCategory {
   name: string;
-  items: string[];
+  items: SkillItem[];
 }
 
 export interface SkillsTranslations {
