@@ -7,11 +7,11 @@ export const en: Translations = {
   },
   hero: {
     name: 'Shan Lin',
-    role: 'Software Engineer @ Tencent',
+    role: 'Backend Developer @ Tencent',
     tagline: 'Focused on Tencent Cloud edge inference and edge AI technologies',
   },
   sidebar: {
-    bio: 'Software Engineer at Tencent, focused on edge inference and edge AI for Tencent Cloud. M.S. in Computer Science from Harbin Institute of Technology.',
+    bio: 'Backend Developer at Tencent, focused on edge inference and edge AI for Tencent Cloud. M.S. in Computer Science from Harbin Institute of Technology.',
     navAbout: 'About',
     navTimeline: 'Experience',
     navSkills: 'Skills',
@@ -20,7 +20,7 @@ export const en: Translations = {
   about: {
     title: 'About Me',
     paragraphs: [
-      'I am a Software Engineer at Tencent, focusing on edge inference and edge AI for Tencent Cloud. I am dedicated to bringing AI capabilities to the edge — enabling computation closer to data sources for lower latency and higher efficiency.',
+      'I am a Backend Developer at Tencent, focusing on edge inference and edge AI for Tencent Cloud. I am dedicated to bringing AI capabilities to the edge — enabling computation closer to data sources for lower latency and higher efficiency.',
       'I hold a Master\'s degree in Computer Science from Harbin Institute of Technology (HIT). In my spare time, I enjoy contributing to open-source projects, exploring cutting-edge technologies, and continuously improving my engineering skills.',
     ],
   },
@@ -31,28 +31,28 @@ export const en: Translations = {
     items: [
       {
         company: 'Tencent',
-        role: 'Software Engineer',
+        role: 'Backend Developer',
         period: '2026.06 - Present',
         description: 'Responsible for R&D of Tencent Cloud edge inference and edge AI products, covering edge inference framework optimization, model deployment acceleration, and edge intelligent scheduling.',
         type: 'work' as const,
       },
       {
         company: 'Tencent',
-        role: 'Edge AI Intern',
+        role: 'Backend Developer',
         period: '2025.12 - 2026.05',
         description: 'Participated in Tencent Cloud edge AI projects, responsible for optimizing and adapting edge inference engines, and exploring model deployment solutions for edge scenarios.',
         type: 'internship' as const,
       },
       {
         company: 'Tencent',
-        role: 'CDN Rule Engine Intern',
+        role: 'Backend Developer',
         period: '2026.03 - 2026.10',
         description: 'Participated in the development of Tencent Cloud CDN rule engine, responsible for rule configuration, traffic scheduling, and content delivery strategy optimization.',
         type: 'internship' as const,
       },
       {
         company: 'JD.com',
-        role: 'AI Intern',
+        role: 'Backend Developer',
         period: '2025.09 - 2026.03',
         description: 'Responsible for AI shopping guide and health detection projects, participating in intelligent recommendation algorithm development and health data analysis model construction.',
         type: 'internship' as const,

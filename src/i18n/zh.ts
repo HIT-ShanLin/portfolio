@@ -7,11 +7,11 @@ export const zh: Translations = {
   },
   hero: {
     name: 'Shan Lin',
-    role: '软件工程师 @ 腾讯',
+    role: '后台开发 @ 腾讯',
     tagline: '专注于腾讯云边缘推理与边缘AI技术',
   },
   sidebar: {
-    bio: '腾讯软件工程师，专注于腾讯云边缘推理与边缘AI。毕业于哈尔滨工业大学计算机专业（硕士）。',
+    bio: '腾讯后台开发，专注于腾讯云边缘推理与边缘AI。毕业于哈尔滨工业大学计算机专业（硕士）。',
     navAbout: '关于',
     navTimeline: '经历',
     navSkills: '技能',
@@ -20,7 +20,7 @@ export const zh: Translations = {
   about: {
     title: '关于我',
     paragraphs: [
-      '我是腾讯的一名软件工程师，专注于腾讯云的边缘推理与边缘AI领域。我致力于将AI能力推向边缘，让计算更靠近数据源，提供更低延迟、更高效率的智能服务。',
+      '我是腾讯的一名后台开发工程师，专注于腾讯云的边缘推理与边缘AI领域。我致力于将AI能力推向边缘，让计算更靠近数据源，提供更低延迟、更高效率的智能服务。',
       '我毕业于哈尔滨工业大学计算机科学与技术专业，获硕士学位。在业余时间，我喜欢参与开源项目，探索前沿技术，并持续提升自己的工程能力。',
     ],
   },
@@ -31,28 +31,28 @@ export const zh: Translations = {
     items: [
       {
         company: '腾讯',
-        role: '软件工程师',
+        role: '后台开发',
         period: '2026.06 - 至今',
         description: '负责腾讯云边缘推理与边缘AI相关产品的研发，涵盖边缘推理框架优化、模型部署加速、边缘智能调度等方向。',
         type: 'work',
       },
       {
         company: '腾讯',
-        role: '边缘AI实习生',
+        role: '后台开发',
         period: '2025.12 - 2026.05',
         description: '参与腾讯云边缘AI相关项目，负责边缘推理引擎的优化与适配，探索边缘场景下的模型部署方案。',
         type: 'internship',
       },
       {
         company: '腾讯',
-        role: 'CDN规则引擎实习生',
+        role: '后台开发',
         period: '2026.03 - 2026.10',
         description: '参与腾讯云CDN规则引擎相关开发工作，负责规则配置、流量调度与内容分发策略的优化。',
         type: 'internship',
       },
       {
         company: '京东',
-        role: 'AI实习生',
+        role: '后端开发',
         period: '2025.09 - 2026.03',
         description: '负责AI导购与健康检测相关项目，参与智能推荐算法开发与健康数据分析模型的构建。',
         type: 'internship',
