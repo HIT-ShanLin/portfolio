@@ -28,119 +28,100 @@ try {
 ---
 
 <section id="projects" class="section">
-  <div class="container">
-    <h2 class="section-title">{t.title}</h2>
+  <h2 class="section-title">{t.title}</h2>
 
-    {repos.length === 0 && (
-      <p class="projects-empty">{t.noProjects}</p>
-    )}
+  {repos.length === 0 && (
+    <p class="projects-empty">{t.noProjects}</p>
+  )}
 
-    <div class="projects-grid">
-      {repos.map((repo) => (
-        <a
-          href={repo.html_url}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="project-card"
-        >
-          <h3 class="project-name">{repo.name}</h3>
-          <p class="project-desc">
-            {repo.description || repo.name}
-          </p>
-          <div class="project-meta">
-            {repo.language && (
-              <span class="project-lang">{repo.language}</span>
-            )}
-            <span class="project-stars">⭐ {repo.stargazers_count}</span>
-          </div>
-        </a>
-      ))}
-    </div>
-
-    <div class="projects-footer">
+  <div class="projects-list">
+    {repos.map((repo) => (
       <a
-        href="https://github.com/HIT-ShanLin?tab=repositories"
+        href={repo.html_url}
         target="_blank"
         rel="noopener noreferrer"
-        class="projects-more"
+        class="project-entry"
       >
-        {t.viewOnGithub} →
+        <h3 class="project-name">{repo.name}</h3>
+        <p class="project-desc">
+          {repo.description || repo.name}
+        </p>
+        <div class="project-meta">
+          {repo.language && (
+            <span class="project-lang">{repo.language}</span>
+          )}
+          <span class="project-stars">⭐ {repo.stargazers_count}</span>
+        </div>
       </a>
-    </div>
+    ))}
   </div>
+
+  <p class="projects-footer">
+    <a
+      href="https://github.com/HIT-ShanLin?tab=repositories"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {t.viewOnGithub} →
+    </a>
+  </p>
 </section>
 
 <style>
-  .projects-grid {
-    max-width: 900px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.25rem;
-  }
-
-  .project-card {
+  .projects-list {
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
-    background: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    border-radius: 0.75rem;
-    transition: box-shadow 0.2s, transform 0.2s;
   }
 
-  .project-card:hover {
-    box-shadow: 0 4px 16px var(--color-card-hover-shadow);
-    transform: translateY(-2px);
+  .project-entry {
+    display: block;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--color-border-light);
+    transition: color 0.15s;
+  }
+
+  .project-entry:last-of-type {
+    border-bottom: none;
+  }
+
+  .project-entry:hover .project-name {
+    color: var(--color-accent-hover);
   }
 
   .project-name {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    color: var(--color-accent);
-    margin-bottom: 0.5rem;
-    word-break: break-word;
+    color: var(--color-link);
+    margin-bottom: 0.15rem;
   }
 
   .project-desc {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--color-text-secondary);
     line-height: 1.6;
-    flex: 1;
-    margin-bottom: 1rem;
+    margin-bottom: 0.35rem;
   }
 
   .project-meta {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    font-size: 0.8rem;
+    gap: 0.75rem;
+    font-size: 0.75rem;
     color: var(--color-text-muted);
   }
 
   .projects-footer {
-    text-align: center;
-    margin-top: 2.5rem;
+    padding-top: 0.75rem;
+    font-size: 0.85rem;
   }
 
-  .projects-more {
-    display: inline-block;
-    padding: 0.6rem 1.4rem;
-    border-radius: 0.5rem;
-    font-size: 0.9rem;
+  .projects-footer a {
+    color: var(--color-link);
     font-weight: 500;
-    color: var(--color-accent);
-    border: 1px solid var(--color-accent);
-    transition: background-color 0.2s, color 0.2s;
-  }
-
-  .projects-more:hover {
-    background-color: var(--color-accent);
-    color: #fff;
   }
 
   .projects-empty {
-    text-align: center;
     color: var(--color-text-muted);
+    font-size: 0.9rem;
   }
 </style>

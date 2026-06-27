@@ -9,25 +9,22 @@ const { about } = Astro.props;
 ---
 
 <section id="about" class="section">
-  <div class="container">
-    <h2 class="section-title">{about.title}</h2>
-    <div class="about-content">
-      {about.paragraphs.map((p) => <p class="about-paragraph">{p}</p>)}
-    </div>
+  <h2 class="section-title">{about.title}</h2>
+  <div class="about-content">
+    {about.paragraphs.map((p) => <p class="about-paragraph">{p}</p>)}
   </div>
 </section>
 
 <style>
   .about-content {
-    max-width: 680px;
-    margin: 0 auto;
+    max-width: 100%;
   }
 
   .about-paragraph {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     line-height: 1.8;
-    color: var(--color-text-secondary);
-    margin-bottom: 1.25rem;
+    color: var(--color-text);
+    margin-bottom: 1rem;
   }
 
   .about-paragraph:last-child {

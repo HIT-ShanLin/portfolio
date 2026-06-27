@@ -8,51 +8,22 @@ interface Props {
 const { footer } = Astro.props;
 ---
 
-<footer class="footer">
-  <div class="container footer-inner">
-    <p class="footer-text">{footer.copyright}</p>
+<footer class="footer section">
+  <div class="footer-inner">
+    <p class="footer-text">© 2026 Shan Lin</p>
     <p class="footer-text footer-built">{footer.builtWith}</p>
-    <div class="footer-links">
-      <a href="https://github.com/HIT-ShanLin" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
-      <a href="mailto:shanlin2023@163.com" class="footer-link">Email</a>
-    </div>
   </div>
 </footer>
 
 <style>
   .footer {
-    padding: 2.5rem 0;
-    border-top: 1px solid var(--color-border);
-    background-color: var(--color-bg-secondary);
-  }
-
-  .footer-inner {
-    text-align: center;
+    border-bottom: none !important;
+    padding-top: 1.5rem !important;
   }
 
   .footer-text {
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     color: var(--color-text-muted);
-  }
-
-  .footer-built {
-    margin-top: 0.3rem;
-  }
-
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 1rem;
-  }
-
-  .footer-link {
-    font-size: 0.9rem;
-    color: var(--color-text-secondary);
-    transition: color 0.2s;
-  }
-
-  .footer-link:hover {
-    color: var(--color-accent);
+    line-height: 1.6;
   }
 </style>

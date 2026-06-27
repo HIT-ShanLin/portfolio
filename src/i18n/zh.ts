@@ -5,16 +5,17 @@ export const zh: Translations = {
     title: 'Shan Lin - 个人简介',
     description: 'Shan Lin 的个人主页 - 工作经历、技术能力与项目展示',
   },
-  nav: {
-    about: '关于',
-    skills: '技能',
-    timeline: '经历',
-    projects: '项目',
-  },
   hero: {
     name: 'Shan Lin',
     role: '软件工程师',
     tagline: '热爱技术，专注于构建优秀的软件产品',
+  },
+  sidebar: {
+    bio: '软件工程师，专注于[你的技术领域]。毕业于[你的学校]，目前工作/学习于[你的单位]。',
+    navAbout: '关于',
+    navTimeline: '经历',
+    navSkills: '技能',
+    navProjects: '项目',
   },
   about: {
     title: '关于我',

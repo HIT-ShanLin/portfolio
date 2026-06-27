@@ -1,14 +1,15 @@
-export interface NavTranslations {
-  about: string;
-  skills: string;
-  timeline: string;
-  projects: string;
-}
-
 export interface HeroTranslations {
   name: string;
   role: string;
   tagline: string;
+}
+
+export interface SidebarTranslations {
+  bio: string;
+  navAbout: string;
+  navTimeline: string;
+  navSkills: string;
+  navProjects: string;
 }
 
 export interface AboutTranslations {
@@ -58,8 +59,8 @@ export interface FooterTranslations {
 
 export interface Translations {
   site: { title: string; description: string };
-  nav: NavTranslations;
   hero: HeroTranslations;
+  sidebar: SidebarTranslations;
   about: AboutTranslations;
   timeline: TimelineTranslations;
   skills: SkillsTranslations;

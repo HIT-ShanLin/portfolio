@@ -5,16 +5,17 @@ export const en: Translations = {
     title: 'Shan Lin - Portfolio',
     description: 'Personal portfolio of Shan Lin - work experience, skills, and projects',
   },
-  nav: {
-    about: 'About',
-    skills: 'Skills',
-    timeline: 'Experience',
-    projects: 'Projects',
-  },
   hero: {
     name: 'Shan Lin',
     role: 'Software Engineer',
     tagline: 'Passionate about technology, focused on building great software products',
+  },
+  sidebar: {
+    bio: 'Software engineer focused on [your field]. Graduated from [your school], currently at [your organization].',
+    navAbout: 'About',
+    navTimeline: 'Experience',
+    navSkills: 'Skills',
+    navProjects: 'Projects',
   },
   about: {
     title: 'About Me',
