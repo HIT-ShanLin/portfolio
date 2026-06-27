@@ -23,7 +23,7 @@ const { hero, zh: zhSidebar, en: enSidebar } = Astro.props;
   <!-- Info -->
   <div class="sidebar-info">
     <div class="sidebar-info-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="15" height="15">
         <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
         <path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5"/>
       </svg>
@@ -31,20 +31,27 @@ const { hero, zh: zhSidebar, en: enSidebar } = Astro.props;
       <span lang="en">{enSidebar.university}</span>
     </div>
     <div class="sidebar-info-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="15" height="15">
         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
         <circle cx="12" cy="10" r="3"/>
       </svg>
       <span lang="zh">{zhSidebar.location}</span>
       <span lang="en">{enSidebar.location}</span>
     </div>
+    <a href="mailto:shanlin2023@163.com" class="sidebar-info-item sidebar-info-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="15" height="15">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+      <span>shanlin2023@163.com</span>
+    </a>
+    <a href="https://github.com/HIT-ShanLin" target="_blank" rel="noopener noreferrer" class="sidebar-info-item sidebar-info-link">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15">
+        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.604-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/>
+      </svg>
+      <span>HIT-ShanLin</span>
+    </a>
   </div>
-
-  <!-- Bio -->
-  <p class="sidebar-bio">
-    <span lang="zh">{zhSidebar.bio}</span>
-    <span lang="en">{enSidebar.bio}</span>
-  </p>
 
   <!-- Navigation -->
   <nav class="sidebar-nav">
@@ -65,23 +72,6 @@ const { hero, zh: zhSidebar, en: enSidebar } = Astro.props;
       <span lang="en">{enSidebar.navProjects}</span>
     </a>
   </nav>
-
-  <!-- Social Links -->
-  <div class="sidebar-social">
-    <a href="https://github.com/HIT-ShanLin" target="_blank" rel="noopener noreferrer" class="sidebar-social-link" aria-label="GitHub">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.604-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/>
-      </svg>
-      <span>GitHub</span>
-    </a>
-    <a href="mailto:shanlin2023@163.com" class="sidebar-social-link" aria-label="Email">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
-        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-        <polyline points="22,6 12,13 2,6"/>
-      </svg>
-      <span>Email</span>
-    </a>
-  </div>
 
   <!-- Toggles -->
   <div class="sidebar-toggles">
@@ -117,14 +107,14 @@ const { hero, zh: zhSidebar, en: enSidebar } = Astro.props;
   .sidebar-role {
     font-size: 0.85rem;
     color: var(--color-text-secondary);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.85rem;
   }
 
   .sidebar-info {
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;
-    margin-bottom: 1rem;
+    gap: 0.35rem;
+    margin-bottom: 1.25rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--color-border);
   }
@@ -132,8 +122,8 @@ const { hero, zh: zhSidebar, en: enSidebar } = Astro.props;
   .sidebar-info-item {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
-    font-size: 0.78rem;
+    gap: 0.45rem;
+    font-size: 0.84rem;
     color: var(--color-text-secondary);
   }
 
@@ -142,11 +132,13 @@ const { hero, zh: zhSidebar, en: enSidebar } = Astro.props;
     color: var(--color-text-muted);
   }
 
-  .sidebar-bio {
-    font-size: 0.8rem;
-    line-height: 1.6;
+  .sidebar-info-link {
     color: var(--color-text-secondary);
-    margin-bottom: 1.5rem;
+    transition: color 0.15s;
+  }
+
+  .sidebar-info-link:hover {
+    color: var(--color-accent);
   }
 
   .sidebar-nav {
@@ -169,26 +161,6 @@ const { hero, zh: zhSidebar, en: enSidebar } = Astro.props;
   .sidebar-nav-link:focus {
     color: var(--color-accent);
     border-bottom-color: var(--color-accent);
-  }
-
-  .sidebar-social {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .sidebar-social-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.8rem;
-    color: var(--color-text-secondary);
-    transition: color 0.15s;
-  }
-
-  .sidebar-social-link:hover {
-    color: var(--color-accent);
   }
 
   .sidebar-toggles {
@@ -235,12 +207,6 @@ const { hero, zh: zhSidebar, en: enSidebar } = Astro.props;
       flex-direction: row;
       flex-wrap: wrap;
       gap: 0.5rem 1rem;
-      justify-content: center;
-    }
-
-    .sidebar-social {
-      flex-direction: row;
-      gap: 1.25rem;
       justify-content: center;
     }
 
