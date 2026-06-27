@@ -11,7 +11,9 @@ export const en: Translations = {
     tagline: 'Focused on Tencent Cloud edge inference and edge AI technologies',
   },
   sidebar: {
-    bio: 'Backend Developer at Tencent, focused on edge inference and edge AI for Tencent Cloud. M.S. in Computer Science from Harbin Institute of Technology.',
+    bio: 'Backend Developer at Tencent, focused on edge inference and edge AI for Tencent Cloud.',
+    university: 'Harbin Institute of Technology · M.S. CS',
+    location: 'Shanghai, China',
     navAbout: 'About',
     navTimeline: 'Experience',
     navSkills: 'Skills',

@@ -6,6 +6,8 @@ export interface HeroTranslations {
 
 export interface SidebarTranslations {
   bio: string;
+  university: string;
+  location: string;
   navAbout: string;
   navTimeline: string;
   navSkills: string;

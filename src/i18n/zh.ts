@@ -11,7 +11,9 @@ export const zh: Translations = {
     tagline: '专注于腾讯云边缘推理与边缘AI技术',
   },
   sidebar: {
-    bio: '腾讯后台开发，专注于腾讯云边缘推理与边缘AI。毕业于哈尔滨工业大学计算机专业（硕士）。',
+    bio: '腾讯后台开发，专注于腾讯云边缘推理与边缘AI。',
+    university: '哈尔滨工业大学 · 计算机硕士',
+    location: '中国 · 上海',
     navAbout: '关于',
     navTimeline: '经历',
     navSkills: '技能',
