@@ -1,0 +1,36 @@
+---
+import type { AboutTranslations } from '../i18n/types';
+
+interface Props {
+  about: AboutTranslations;
+}
+
+const { about } = Astro.props;
+---
+
+<section id="about" class="section">
+  <div class="container">
+    <h2 class="section-title">{about.title}</h2>
+    <div class="about-content">
+      {about.paragraphs.map((p) => <p class="about-paragraph">{p}</p>)}
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-content {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .about-paragraph {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin-bottom: 1.25rem;
+  }
+
+  .about-paragraph:last-child {
+    margin-bottom: 0;
+  }
+</style>
